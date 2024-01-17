@@ -8,25 +8,27 @@
 <body>
     <script>
         // function declaration (normal)
-        function Declaration(name) {
+        function declaration(name) {
             return 'Привет ' + name + '!';
         }
 
         // function expression (normal)
-        const Expression = function(name) {
+        const expression = function(name) {
             return 'Привет ' + name + '!';
         };
 
         // function expression (arrow) - вариация 1
-        const Arrow1 = (name) => 'Привет ' + name + '!';
+        const arrow1 = (name) => 'Привет ' + name + '!';
 
         // function expression (arrow) - вариация 2
-        const Arrow2 = name => `Привет ${name}!`;
+        const arrow2 = (name) => {
+	    return 'Привет ' + name + '!';
+	};
 
-        console.log(Declaration('Alex'));
-        console.log(Expression('Alex'));
-        console.log(Arrow1('Alex'));
-        console.log(Arrow2('Alex'));
+        console.log(declaration('Alex'));
+        console.log(expression('Alex'));
+        console.log(arrow1('Alex'));
+        console.log(arrow2('Alex'));
     </script>
 </body>
 </html>
